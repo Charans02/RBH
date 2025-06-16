@@ -13,18 +13,18 @@ export const CONTACT_INFO = [
   {
     name: "Email",
     icon: <Mail size={16} className="stroke-foreground fill-background" />,
-    value: "kreeves@goodnewshaulers.com",
+    value: "postyourdeal@gmail.com",
   },
   {
     name: "Address",
 
     icon: <MapPin size={16} className="stroke-foreground fill-background" />,
-    value: "5904 S. Cooper St. Suite 104 #905 Arlington TX 76017",
+    value: "123, Dunn, NC, United States, North Carolina",
   },
   {
     name: "Phone",
     icon: <Phone size={16} className="stroke-foreground fill-background" />,
-    value: "817-681-2020",
+    value: "919-812-4559",
   },
 ];
 
@@ -42,7 +42,7 @@ export const SOCIAL_LINKS = [
   {
     name: "Facebook",
     icon: <Facebook size={24} />,
-    url: "https://www.facebook.com/share/18x1YEk9EE/?mibextid=wwXIfr",
+    url: "https://www.facebook.com/share/1ATph85yRm/?mibextid=wwXIfr",
   },
   // {
   //   name: "Youtube",
@@ -105,9 +105,18 @@ export const TESTIMONIALS: TestimonialType[] = [
 ];
 
 export const SERVICE_AREAS = [
-  "Arlington",
-  "Mansfield",
-  "Grand Prairie",
+  "Holly Springs", 
+  "Apex", 
+  "Cary", 
+  "Fuquay Varina", 
+  "Raleigh", 
+  "Angier", 
+  "Lillington", 
+  "Coats", 
+  "Erwin", 
+  "Dunn", "Spring Lake", 
+  "Bunnlevel", 
+  "Fayetteville",
   "And Surrounding Areas in ",
 ];
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useCallback } from "react";
 import { AlignJustify, MessageCircle, Phone, PhoneCall, X } from "lucide-react";
-declare function gtag_report_conversion(url?: string): boolean;
+// declare function gtag_report_conversion(url?: string): boolean;
 
 const Header = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -64,7 +64,7 @@ const Header = () => {
         <div className="mx-auto flex max-w-[1512px] flex-row-reverse items-center justify-between gap-1.5 px-[20px] py-3 md:grid md:grid-cols-3 md:px-[35px] lg:grid lg:h-[92px] lg:grid-cols-3 lg:px-[60px] lg:py-1 xl:flex xl:h-[152px] xl:flex-row xl:py-4 2xl:grid 2xl:grid-cols-3 2xl:items-center 2xl:px-[60px]">
           <div className="hidden gap-12 xl:flex 2xl:justify-self-start">
             <Link href="#story" onClick={(e) => handleNavClick(e, "story")}>
-              <p className="hover:text-blue-500 font-[family-name:var(--font-sora-sans)] leading-[100%] font-normal transition-all hover:underline xl:text-[18px] 2xl:text-[20px]">
+              <p className="hover:text-red-500 font-[family-name:var(--font-sora-sans)] leading-[100%] font-normal transition-all hover:underline xl:text-[18px] 2xl:text-[20px]">
                 About
               </p>
             </Link>
@@ -72,7 +72,7 @@ const Header = () => {
               href="#testimonials"
               onClick={(e) => handleNavClick(e, "testimonials")}
             >
-              <p className="hover:text-blue-500 font-[family-name:var(--font-sora-sans)] leading-[100%] font-normal transition-all hover:underline xl:text-[18px] 2xl:text-[20px]">
+              <p className="hover:text-red-500 font-[family-name:var(--font-sora-sans)] leading-[100%] font-normal transition-all hover:underline xl:text-[18px] 2xl:text-[20px]">
                 Reviews
               </p>
             </Link>
@@ -80,7 +80,7 @@ const Header = () => {
               href="#services"
               onClick={(e) => handleNavClick(e, "services")}
             >
-              <p className="hover:text-blue-500 font-[family-name:var(--font-sora-sans)] leading-[100%] font-normal transition-all hover:underline xl:text-[18px] 2xl:text-[20px]">
+              <p className="hover:text-red-500 font-[family-name:var(--font-sora-sans)] leading-[100%] font-normal transition-all hover:underline xl:text-[18px] 2xl:text-[20px]">
                 Services
               </p>
             </Link>
@@ -88,11 +88,11 @@ const Header = () => {
 
           <div className="col-start-1 flex items-center ml-1 gap-0.5 xl:hidden">
             <a
-              href="tel:+18176812020"
+              href="tel:+19198124559"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => gtag_report_conversion('tel:+18176812020')}
-              className="flex items-center gap-1 rounded-full bg-blue-600 px-1 py-0.5 text-sm font-[family-name:var(--font-sora-sans)] text-white shadow-md transition hover:bg-blue-700"
+              // onClick={() => gtag_report_conversion('tel:+18176812020')}
+              className="flex items-center gap-1 rounded-full bg-red-600 px-1 py-0.5 text-sm font-[family-name:var(--font-sora-sans)] text-white shadow-md transition hover:bg-red-700"
               aria-label="Reserve Your Dumpster"
             >
               <Phone size={18} />
@@ -100,7 +100,7 @@ const Header = () => {
             </a>
 
             <button
-              className="hover:text-blue-500 cursor-pointer transition-colors"
+              className="hover:text-red-500 cursor-pointer transition-colors"
               onClick={handleClick}
               aria-label="Menu"
             >
@@ -121,7 +121,7 @@ const Header = () => {
               className="block h-[34px] w-[38px] md:hidden xl:h-[122px] xl:w-[134px]"
             />
             <p className="font-[family-name:var(--font-sora-sans)] text-[13px] leading-[100%] font-semibold md:text-[20px] xl:text-[23px]">
-              Good News Haulers&nbsp;
+              Red Bull Hauling&nbsp;
             </p>
             <Image
               src="/images/logo.png"
@@ -142,40 +142,40 @@ const Header = () => {
               onClick={(e) => handleNavClick(e, "top")}
             >
               <p className="font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-semibold">
-                Good News
+                Red Bull
               </p>
               <Image
                 src="/images/logo.png"
                 alt="Trash Lion Logo"
                 width={224}
                 height={102}
-                className="h-[120px] w-[205px]"
+                className="h-[120px] w-[155px]"
               />
               <p className="font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-semibold">
-                Haulers
+                Hauling
               </p>
             </Link>
           </div>
 
           <div className="hidden items-center gap-20 md:col-start-3 md:flex md:justify-self-end 2xl:justify-self-end 2xl:gap-12">
             <div className="hidden items-center gap-2.5 text-nowrap xl:flex">
-              <PhoneCall size={30} fill="#0000FF" stroke="none" />
+              <PhoneCall size={30} fill="#FF0000" stroke="none" />
               <p className="font-[family-name:var(--font-sora-sans)] text-[20px] leading-[100%] font-bold">
-                817 - 681 - 2020
+                919 - 812 - 4559
               </p>
             </div>
             <a
-              href="tel:+18176812020"
+              href="tel:+19198124559"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => gtag_report_conversion('tel:+18176812020')}
-              className="group bg-blue-600 hover:text-blue-600 flex cursor-pointer items-center gap-2.5 rounded-full px-9 py-3 transition-colors hover:bg-white 2xl:w-fit 2xl:text-nowrap"
+              // onClick={() => gtag_report_conversion('tel:+18176812020')}
+              className="group bg-red-600 hover:text-red-600 flex cursor-pointer items-center gap-2.5 rounded-full px-9 py-3 transition-colors hover:bg-white 2xl:w-fit 2xl:text-nowrap"
             >
               <div className="relative">
                 <MessageCircle size={24} />
                 <Phone
                   size={10}
-                  className="group-hover:fill-blue-900 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-white"
+                  className="group-hover:fill-red-900 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-white"
                 />
               </div>
               <p className="hidden font-[family-name:var(--font-sora-sans)] text-[16px] leading-[100%] font-semibold lg:block">
@@ -188,7 +188,7 @@ const Header = () => {
         <div className="relative flex h-screen items-center justify-center bg-black">
           <div className="flex flex-col items-center gap-18">
             <Link href="#story" onClick={(e) => handleNavClick(e, "story")}>
-              <p className="hover:text-blue-500 font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all">
+              <p className="hover:text-red-500 font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all">
                 About
               </p>
             </Link>
@@ -196,7 +196,7 @@ const Header = () => {
               href="#testimonials"
               onClick={(e) => handleNavClick(e, "testimonials")}
             >
-              <p className="hover:text-blue-500 font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all">
+              <p className="hover:text-red-500 font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all">
                 Reviews
               </p>
             </Link>
@@ -204,13 +204,13 @@ const Header = () => {
               href="#services"
               onClick={(e) => handleNavClick(e, "services")}
             >
-              <p className="hover:text-blue-500 font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all">
+              <p className="hover:text-red-500 font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all">
                 Services
               </p>
             </Link>
           </div>
           <button
-            className="hover:text-blue-500 absolute top-6 right-6 block cursor-pointer transition-colors"
+            className="hover:text-red-500 absolute top-6 right-6 block cursor-pointer transition-colors"
             onClick={handleClick}
           >
             <X className="size-8" />

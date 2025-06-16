@@ -3,7 +3,7 @@ import Image from "next/image";
 import { CalendarRange, Truck, MessageCircle, Phone } from "lucide-react";
 import { Text } from "@/components/ui";
 import { useRef, useEffect } from "react";
-declare function gtag_report_conversion(url?: string): boolean;
+// declare function gtag_report_conversion(url?: string): boolean;
 
 const Hero = ({ setHeroInView }: { setHeroInView?: (inView: boolean) => void }) => {
   const heroRef = useRef<HTMLDivElement | null>(null);
@@ -48,8 +48,8 @@ const Hero = ({ setHeroInView }: { setHeroInView?: (inView: boolean) => void }) 
               variant="h1"
               className="text-center text-[38px] leading-[50px] sm:text-[28px] sm:leading-[43px] md:text-[34px] md:leading-[43px] lg:text-left xl:text-left xl:text-[55px] xl:leading-[78px]"
             >
-              <span className="text-blue-600 font-extrabold">
-                Arlington&apos;s Top-Rated Junk Removal Team
+              <span className="text-red-600 font-extrabold">
+                North Carolina&apos;s Top-Rated Junk Removal Team
               </span>
               <br />
               Locally Owned and Faith-Driven.
@@ -57,7 +57,7 @@ const Hero = ({ setHeroInView }: { setHeroInView?: (inView: boolean) => void }) 
 
             <Text className="text-center text-[16px] leading-[23px] md:text-left lg:text-[21px] lg:leading-[26px] xl:text-left">
               <span className="leading-[33px] font-bold">
-                Serving Texas With Fast Same Day Service.
+                Serving North Carolina With Fast Same Day Service.
               </span>
             </Text>
 
@@ -128,24 +128,24 @@ const Hero = ({ setHeroInView }: { setHeroInView?: (inView: boolean) => void }) 
 
             <div className="h-4" />
             <div className="flex w-full flex-col items-center md:items-start gap-12">
-              <Text className="text-center text-[18px] text-blue-500 md:text-left lg:text-[26px]">
+              <Text className="text-center text-[18px] text-red-400 md:text-left lg:text-[26px]">
                 <span className="font-bold">
                   $50 Off For New Customers
                 </span>
               </Text>
 
               <a
-                href="tel:+18176812020"
+                href="tel:+19198124559"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => gtag_report_conversion('tel:+18176812020')}
-                className="group bg-blue-500 hover:text-blue-500 flex h-[54px] w-full max-w-[348px] cursor-pointer items-center justify-center gap-2.5 rounded-full px-8 py-4 text-white hover:bg-[#f3f3f3]"
+                // onClick={() => gtag_report_conversion('tel:+19198124559')}
+                className="group bg-red-500 hover:text-red-500 flex h-[54px] w-full max-w-[348px] cursor-pointer items-center justify-center gap-2.5 rounded-full px-8 py-4 text-white hover:bg-[#f3f3f3]"
               >
                 <div className="relative">
                   <MessageCircle size={24} />
                   <Phone
                     size={10}
-                    className="group-hover:fill-blue-500 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-white"
+                    className="group-hover:fill-red-500 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-white"
                   />
                 </div>
                 <p className="font-semibold text-[16px] uppercase">

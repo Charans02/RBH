@@ -12,7 +12,7 @@ const Footer = () => {
           <section className="flex !max-w-[640px] flex-col-reverse items-center justify-between gap-16 lg:!max-w-[860px] xl:!max-w-[1512px] xl:flex-row xl:items-start">
             <div className="flex flex-col items-center xl:w-2/5 xl:items-start">
               <Text variant="h4">
-                Good News<span className="text-blue-700"> Haulers</span>
+                Red Bull<span className="text-red-700"> Hauling</span>
               </Text>
               <Text className="mt-4">
                 We don&apos;t just haul junk. We restore peace of mind. We are open 24/7 ready to get any job done!
@@ -23,7 +23,7 @@ const Footer = () => {
                     key={link.name}
                     href={link.url}
                     target="_blank"
-                    className="bg-foreground border-background hover:border-blue-400 hover:bg-blue-800 flex size-10 items-center justify-center rounded-lg border transition-colors"
+                    className="bg-foreground border-background hover:border-red-400 hover:bg-red-800 flex size-10 items-center justify-center rounded-lg border transition-colors"
                   >
                     {link.icon}
                   </Link>
@@ -38,7 +38,7 @@ const Footer = () => {
                 <div className="flex flex-col gap-4">
                   {QUICK_LINKS.map((link) => (
                     <Link key={link.name} href={link.url}>
-                      <Text className="hover:text-blue-500 transition-colors">
+                      <Text className="hover:text-red-500 transition-colors">
                         {link.name}
                       </Text>
                     </Link>

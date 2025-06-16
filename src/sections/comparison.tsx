@@ -177,11 +177,11 @@ const Comparison = () => {
                     handle={
                       <ReactCompareSliderHandle
                         buttonStyle={{
-                          backgroundColor: "#0000FF",
+                          backgroundColor: "#FF0000",
                         }}
                         linesStyle={{
                           width: lineWidth,
-                          background: "#0000FF",
+                          background: "#FF0000",
                         }}
                       />
                     }
@@ -222,7 +222,7 @@ const Comparison = () => {
                           loading="eager"
                           draggable={false}
                         />
-                        <div className="bg-blue-500 absolute top-4 right-4 rounded-full px-3 py-1 text-sm text-white">
+                        <div className="bg-red-500 absolute top-4 right-4 rounded-full px-3 py-1 text-sm text-white">
                           After
                         </div>
                       </div>

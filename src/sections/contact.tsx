@@ -39,7 +39,7 @@ const Contact = () => {
   );
 
   const locations = [
-    { name: "Philadelphia", latitude: 32.705002, longitude: -97.122780 },
+    { name: "North Carolina", latitude: 35.782169, longitude: -80.793457 },
   ];
 
   const markers: LatLngTuple[] = locations.map((location) => [
@@ -57,7 +57,7 @@ const Contact = () => {
           <Text variant="h2" className="text-center xl:text-left">
             Want to Hire The Best In {isMediumScreen && <br />} Texas
             <br />
-            <span className="text-red hidden"> Call Good News Haulers</span>
+            <span className="text-red hidden"> Call Red Bull Hauling</span>
           </Text>
           {/* <Image
             src="/images/map.png"
@@ -67,12 +67,12 @@ const Contact = () => {
             className="border-red mt-8 w-full rounded-md border shadow sm:rounded-lg xl:rounded-xl"
           /> */}
           <div className="border-blue-500 mx-auto mt-8 h-[500px] overflow-hidden rounded-md border shadow sm:rounded-lg xl:rounded-xl">
-            <Map posix={[32.705002, -97.122780]} markers={markers} />
+            <Map posix={[35.782169, -80.793457]} markers={markers} />
           </div>
         </div>
         <div className="flex w-full flex-1 flex-col items-center gap-4 rounded-2xl bg-white p-8 shadow">
           <p className="text-blue-800 mb-8 text-center font-[family-name:var(--font-sora-sans)] text-[40px] leading-[40px] font-semibold xl:text-left">
-            Reach out to Good News Haulers!
+            Reach out to Red Bull Hauling!
           </p>
           <form
             className="w-full"

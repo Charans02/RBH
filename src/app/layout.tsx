@@ -21,8 +21,8 @@ const soraSans = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Good News Haulers | Faith-Driven Junk Removal Done Right",
-  description: "Fast, Affordable, Reliable",
+  title: "Red Bull Hauling | Junk Removal",
+  description: "Junk Removal",
 };
 
 export default function RootLayout({

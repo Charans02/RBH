@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Text } from "@/components/ui";
 import { MessageCircle, Phone } from "lucide-react";
-declare function gtag_report_conversion(url?: string): boolean;
+// declare function gtag_report_conversion(url?: string): boolean;
 
 const STATES = [
   { content: 60, more: true, description: "Satisfied Customers" },
@@ -29,25 +29,25 @@ const States = () => {
             className="max-w-[467px] text-center md:max-w-full xl:text-left"
           >
             Your Junk Removal Solution,
-            <span className="text-blue-700"> Good News Haulers!</span>
+            <span className="text-red-700"> Red Bull Hauling!</span>
           </Text>
           <Text className="mt-6 max-w-[516px] text-center text-[#525252] md:max-w-full xl:text-left">
             Whether you are looking for a small junk removal job or a whole
-            house clean-out, Good News Haulers can get it done. We are open 24/7 always
+            house clean-out, Red Bull Hauling can get it done. We are open 24/7 always
             taking call and new customers.
           </Text>
           {/* Insert Button Below */}
           <a
-            href="tel:+18176812020"
+            href="tel:+19198124559"
             target="_blank"
-            onClick={() => gtag_report_conversion('tel:+18176812020')}
-            className="group bg-blue-500 hover:text-blue-500 mt-6 flex h-[54px] w-full max-w-[348px] cursor-pointer items-center justify-center gap-2.5 rounded-full px-8 py-4 text-white transition-colors hover:bg-[#f3f3f3]"
+            // onClick={() => gtag_report_conversion('tel:+19198124559')}
+            className="group bg-red-500 hover:text-red-500 mt-6 flex h-[54px] w-full max-w-[348px] cursor-pointer items-center justify-center gap-2.5 rounded-full px-8 py-4 text-white transition-colors hover:bg-[#f3f3f3]"
           >
             <div className="relative">
               <MessageCircle size={24} />
               <Phone
                 size={10}
-                className="group-hover:fill-blue-500 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-white"
+                className="group-hover:fill-red-500 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-white"
               />
             </div>
             <p className="font-[family-name:var(--font-sora-sans)] text-[16px] leading-[100%] font-semibold uppercase">
@@ -62,7 +62,7 @@ const States = () => {
               >
                 <Text variant="h2">
                   {state.content}
-                  {state.more && <span className="text-blue-600">+</span>}
+                  {state.more && <span className="text-red-600">+</span>}
                 </Text>
                 <Text variant="body2" className="text-[#525252]">
                   {state.description}

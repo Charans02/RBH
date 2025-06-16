@@ -15,7 +15,7 @@ const Services = () => {
           variant="h2"
           className="max-w-[768px] text-center xl:max-w-[1146px]"
         >
-          We <span className="text-blue-700">remove any unwanted junk</span> you have
+          We <span className="text-red-700">remove any unwanted junk</span> you have
           laying around and need gone!
         </Text>
         <div className="mt-8 flex flex-col justify-between gap-8 lg:mt-16 xl:flex-row">
@@ -35,9 +35,9 @@ const ServiceCard = ({ s }: { s: ServiceType }) => {
 
   // Banner text based on service title
   const getBannerText = (title: string) => {
-    if (title === "Residential Junk Removal") return "Arlington Curb Side Removal";
-    if (title === "Yard Waste & Debris") return "Mansfield Yard Waste Removal";
-    if (title === "Construction & Renovation Cleanup") return "Grand Prairie Construction Removal";
+    if (title === "Residential Junk Removal") return "Whole House Clearing";
+    if (title === "Yard Waste & Debris") return "Handle All Junk";
+    if (title === "Construction & Renovation Cleanup") return "Big Junk Removal";
     return "";
   };
 
@@ -46,21 +46,21 @@ const ServiceCard = ({ s }: { s: ServiceType }) => {
     if (title === "Residential Junk Removal") {
       return (
         <>
-          <span className="text-blue-600">Residential</span>
+          <span className="text-red-600">Residential</span>
           <span> Junk Removal</span>
         </>
       );
     } else if (title === "Yard Waste & Debris") {
       return (
         <>
-          <span className="text-blue-600">Yard Waste &</span>
+          <span className="text-red-600">Yard Waste &</span>
           <span> Debris</span>
         </>
       );
     } else if (title === "Construction & Renovation Cleanup") {
       return (
         <>
-          <span className="text-blue-600">Construction & Renovation</span>
+          <span className="text-red-600">Construction & Renovation</span>
           <span> Cleanup</span>
         </>
       );
@@ -68,7 +68,7 @@ const ServiceCard = ({ s }: { s: ServiceType }) => {
 
     return (
       <>
-        <span className="text-blue-600 text-[26px] md:text-[30px]">
+        <span className="text-red-600 text-[26px] md:text-[30px]">
           {title.charAt(0).toLocaleUpperCase()}
         </span>
         <span>{title.slice(1).toLocaleUpperCase()}</span>
@@ -83,7 +83,7 @@ const ServiceCard = ({ s }: { s: ServiceType }) => {
         style={{ height: `${imageHeight}px` }}
       >
         {/* Banner Text */}
-        <div className="absolute top-0 left-0 w-full bg-blue-700 text-white text-center text-lg md:text-xl font-bold tracking-wide py-4 z-10">
+        <div className="absolute top-0 left-0 w-full bg-red-700 text-white text-center text-lg md:text-xl font-bold tracking-wide py-4 z-10">
           {getBannerText(s.title)}
         </div>
 

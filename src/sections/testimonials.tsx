@@ -129,27 +129,27 @@ const Testimonials = () => {
               <Text variant="h2">
                 Read what our
                 <br />
-                <span className="text-blue-600"> customers are saying!</span>
+                <span className="text-red-600"> customers are saying!</span>
               </Text>
               <Text
                 variant="body1"
                 className="hidden text-[13px] md:text-[15px] lg:text-[16px]"
               >
-                Texas has been trusting Good News Haulers and our
+                Texas has been trusting Red Bull Hauling and our
                 work quality speaks for itself — see what customers are saying!
               </Text>
             </div>
             <div className="sm:mt-0 flex sm:my-auto mx-auto lg:mx-0 lg:mt-5 xl:mt-13 sm:mr-auto mb-4">
               <div className="mt-4 flex space-x-6">
                 <button
-                  className="bg-blue-600 hover:bg-blue-800/80 flex h-9 w-9 items-center justify-center rounded-full text-white transition-colors"
+                  className="bg-red-600 hover:bg-red-800/80 flex h-9 w-9 items-center justify-center rounded-full text-white transition-colors"
                   onClick={scrollPrev}
                   aria-label="Previous testimonial"
                 >
                   <ChevronLeft size={20} />
                 </button>
                 <button
-                  className="bg-blue-600 hover:bg-blue-800/80 flex h-9 w-9 items-center justify-center rounded-full text-white transition-colors"
+                  className="bg-red-600 hover:bg-red-800/80 flex h-9 w-9 items-center justify-center rounded-full text-white transition-colors"
                   onClick={scrollNext}
                   aria-label="Next testimonial"
                 >
@@ -195,7 +195,7 @@ const Testimonials = () => {
                     if (emblaApi) emblaApi.scrollTo(index);
                   }}
                   className={`h-2 w-2 rounded-full transition-all ${
-                    index === selectedIndex ? "bg-blue-500" : "bg-white/70"
+                    index === selectedIndex ? "bg-red-500" : "bg-white/70"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -240,7 +240,7 @@ const TestimonialCard = React.forwardRef<
                 <span>{t.name.charAt(0)}</span>
               )}
             </div>
-            <p className="text-blue-500 text-center text-[14px] font-semibold md:text-left md:text-[16px] lg:text-[17px]">
+            <p className="text-red-500 text-center text-[14px] font-semibold md:text-left md:text-[16px] lg:text-[17px]">
               {t.name}
             </p>
           </div>

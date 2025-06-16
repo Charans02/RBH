@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="bg-blue-900 my-5 overflow-hidden p-3.5 text-[#ededed] lg:my-6 lg:p-5 xl:my-11 xl:p-8">
+    <div className="bg-red-900 my-5 overflow-hidden p-3.5 text-[#ededed] lg:my-6 lg:p-5 xl:my-11 xl:p-8">
       <div className="animate-scroll flex items-center gap-3.5 lg:gap-5 xl:gap-8">
         <Image
           src="/svgs/sparkles.svg"

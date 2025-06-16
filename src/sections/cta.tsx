@@ -22,7 +22,7 @@ const CTA = ({ heroInView }: { heroInView: boolean }) => {
       )}
 
       <section className="px-5 sm:px-10 md:px-20 py-10 pb-32 sm:pb-24">
-        <div className="relative flex w-full flex-col items-center gap-5 rounded-3xl bg-gradient-to-r from-blue-400 to-blue-600 px-6 py-10 text-white overflow-hidden">
+        <div className="relative flex w-full flex-col items-center gap-5 rounded-3xl bg-gradient-to-r from-red-400 to-red-600 px-6 py-10 text-white overflow-hidden">
           {/* Background */}
           <Image
             src="/images/cta-pattern.png"
@@ -34,8 +34,8 @@ const CTA = ({ heroInView }: { heroInView: boolean }) => {
           {/* Foreground */}
           <div className="relative z-10 flex flex-col items-center gap-5 w-full">
             <p className="text-center text-[24px] sm:text-[36px] xl:text-[56px] leading-tight tracking-tight">
-              “Whatever you do, work at it with all your heart.”
-              <span className="font-semibold underline"> Colossians 3:23</span>
+              You Call It, We
+              <span className="font-semibold underline"> Haul It</span>
             </p>
 
             <p className="text-center font-bold text-[25px] sm:text-[18px] xl:text-[27px]">
@@ -45,7 +45,7 @@ const CTA = ({ heroInView }: { heroInView: boolean }) => {
             <div className="flex flex-col-reverse items-center justify-center gap-1 md:flex-row md:gap-16">
               {/* Email */}
               <div className="flex items-center gap-4 xl:gap-5">
-                <Mail fill="white" stroke="#00008B" className="size-6 sm:size-8" />
+                <Mail fill="white" stroke="#800000" className="size-6 sm:size-8" />
                 <p className="text-[13px] sm:text-[20px] xl:text-[25px] font-semibold">
                   {CONTACT_INFO[0].value}
                 </p>
