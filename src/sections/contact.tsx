@@ -66,12 +66,12 @@ const Contact = () => {
             height={349}
             className="border-red mt-8 w-full rounded-md border shadow sm:rounded-lg xl:rounded-xl"
           /> */}
-          <div className="border-blue-500 mx-auto mt-8 h-[500px] overflow-hidden rounded-md border shadow sm:rounded-lg xl:rounded-xl">
+          <div className="border-red-500 mx-auto mt-8 h-[500px] overflow-hidden rounded-md border shadow sm:rounded-lg xl:rounded-xl">
             <Map posix={[35.782169, -80.793457]} markers={markers} />
           </div>
         </div>
         <div className="flex w-full flex-1 flex-col items-center gap-4 rounded-2xl bg-white p-8 shadow">
-          <p className="text-blue-800 mb-8 text-center font-[family-name:var(--font-sora-sans)] text-[40px] leading-[40px] font-semibold xl:text-left">
+          <p className="text-red-800 mb-8 text-center font-[family-name:var(--font-sora-sans)] text-[40px] leading-[40px] font-semibold xl:text-left">
             Reach out to Red Bull Hauling!
           </p>
           <form
@@ -134,7 +134,7 @@ const Contact = () => {
               <input
                 name="phone"
                 className="focus:outline-red w-full rounded-2xl border-[2px] border-[#989898] p-4 font-[family-name:var(--font-lato-sans)]"
-                placeholder="817-681-2020"
+                placeholder="919-812-4559"
                 required
               />
             </div>
@@ -150,7 +150,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loading}
-              className="bg-blue-800 mt-8 flex w-full cursor-pointer items-center justify-center gap-3 rounded-2xl px-6 py-5 text-white disabled:opacity-70"
+              className="bg-red-800 mt-8 flex w-full cursor-pointer items-center justify-center gap-3 rounded-2xl px-6 py-5 text-white disabled:opacity-70"
             >
               <CircleChevronRight size={20} />
               <Text variant="button">

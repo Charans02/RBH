@@ -11,9 +11,9 @@ import {
   WhyChoose,
   Experts,
   ServiceAreas,
-  // Contact,
+  Contact,
   CTA,
-  // JunkRemovalQuote,
+  JunkRemovalQuote,
 } from "@/sections";
 
 export default function Home() {
@@ -27,6 +27,9 @@ export default function Home() {
       </div> */}
       <Banner />
       <Services />
+      <JunkRemovalQuote />
+      <br />
+      <br />
       <Comparison />
       <States />
       <Testimonials />
@@ -35,7 +38,7 @@ export default function Home() {
       <WhyChoose />
       <Experts />
       <ServiceAreas />
-      {/* <Contact /> */}
+      <Contact />
       <CTA heroInView={heroInView} />
     </>
   );

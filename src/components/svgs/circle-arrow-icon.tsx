@@ -12,7 +12,7 @@ const CircleArrowIcon: React.FC<CircleArrowIconProps> = ({ className }) => {
         "h-[16px] w-[16px] md:h-[16.53px] md:w-[16.53px] xl:h-[29.86px] xl:w-[29.86px]"
       }
       viewBox="0 0 25 24"
-      fill="blue"
+      fill="red"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

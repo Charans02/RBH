@@ -17,6 +17,7 @@ const JunkRemovalQuote = () => {
     name: "",
     email: "",
     phone: "",
+    address: "",
     message: "",
   });
   const [loading, setLoading] = useState(false);
@@ -38,6 +39,7 @@ const JunkRemovalQuote = () => {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
+        address: formData.address,
         message: formData.message,
         isQuoteRequest: true,
       };
@@ -45,7 +47,7 @@ const JunkRemovalQuote = () => {
       const result = await sendEmail(data);
 
       if (result.success) {
-        setFormData({ name: "", email: "", phone: "", message: "" });
+        setFormData({ name: "", email: "", phone: "", address: "", message: "" });
         toast.success(
           "Thank you for your quote request! We will contact you shortly.",
         );
@@ -66,7 +68,7 @@ const JunkRemovalQuote = () => {
 
   return (
     <div className="z-100 mx-auto min-w-[247.68px] px-[20px] md:px-[35px] lg:max-w-[1392px] lg:px-[60px] xl:px-0">
-      <div className="bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 mx-auto rounded-[19.38px] px-[19.84px] pt-[20px] pb-[12px] text-white md:px-[19.84px] md:py-[21.04px] xl:rounded-[35px] xl:px-[35.84px] xl:py-[38px]">
+      <div className="bg-gradient-to-r from-red-500 via-red-600 to-red-900 mx-auto rounded-[19.38px] px-[19.84px] pt-[20px] pb-[12px] text-white md:px-[19.84px] md:py-[21.04px] xl:rounded-[35px] xl:px-[35.84px] xl:py-[38px]">
         <h2 className="mb-[20px] text-center text-[16.6px] font-semibold md:text-[18.6px] xl:mb-[30px] xl:text-[33.6px]">
           Get $<span className="font-[800] underline">50 Off</span> on
           My First Pickup
@@ -95,6 +97,13 @@ const JunkRemovalQuote = () => {
             fieldName="Phone Number"
             name="phone"
             value={formData.phone}
+            onChange={handleChange}
+          />
+          <Field
+            svg={<InformationIcon />}
+            fieldName="Address"
+            name="address"
+            value={formData.address}
             onChange={handleChange}
           />
           <Field
