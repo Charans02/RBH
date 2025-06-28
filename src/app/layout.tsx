@@ -32,36 +32,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${latoSans.variable} ${soraSans.variable} antialiased`}>
-        {/* ✅ Google Tag Script */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16934137027"
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-init" strategy="afterInteractive">
+      {/* ✅ Google Tag Manager in HEAD */}
+      <head>
+        <Script id="gtm-head" strategy="beforeInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-16934137027');
-
-            // ✅ Google Ads Phone Conversion Event Snippet
-            function gtag_report_conversion(url) {
-              var callback = function () {
-                if (typeof(url) !== 'undefined') {
-                  window.location = url;
-                }
-              };
-              gtag('event', 'conversion', {
-                send_to: 'AW-16934137027/BdFhCP3KzNgaEMPZ6Yo_',
-                value: 1.0,
-                currency: 'USD',
-                event_callback: callback
-              });
-              return false;
-            }
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KQQBTWDX');
           `}
         </Script>
+      </head>
+      <body className={`${latoSans.variable} ${soraSans.variable} antialiased`}>
+        {/* ✅ Google Tag Manager (noscript) right after <body> */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KQQBTWDX"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
 
         <Header />
         <main className="overflow-hidden">{children}</main>

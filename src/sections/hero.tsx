@@ -1,9 +1,10 @@
-// hero.tsx
+"use client";
+
 import Image from "next/image";
 import { CalendarRange, Truck, MessageCircle, Phone } from "lucide-react";
 import { Text } from "@/components/ui";
 import { useRef, useEffect } from "react";
-// declare function gtag_report_conversion(url?: string): boolean;
+import JunkRemovalQuote2 from "./junk-removal-quote2";
 
 const Hero = ({ setHeroInView }: { setHeroInView?: (inView: boolean) => void }) => {
   const heroRef = useRef<HTMLDivElement | null>(null);
@@ -13,7 +14,7 @@ const Hero = ({ setHeroInView }: { setHeroInView?: (inView: boolean) => void }) 
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setHeroInView(entry.isIntersecting); // true when Hero is in view
+        setHeroInView(entry.isIntersecting);
       },
       { threshold: 0.1 }
     );
@@ -28,25 +29,52 @@ const Hero = ({ setHeroInView }: { setHeroInView?: (inView: boolean) => void }) 
       className="text-background bg-[url('/images/bg.png')] bg-cover bg-center pt-[58px] md:pt-[92px] xl:pt-[112px]"
     >
       <div className="bg-black-gradient">
-        <section className="flex flex-col-reverse gap-5 !pt-[20px] !pb-[40px] md:flex-row md:gap-[32.01px] md:!pt-[35px] md:!pb-[60px] xl:justify-between xl:gap-0 xl:!pb-[80px] 2xl:!pt-[60px] 2xl:gap-20">
-          {/* Left: Truck Image */}
-          <div className="hidden md:block md:w-5/12 m-auto">
-            <Image
-              src="/images/truck_no_bg.png"
-              alt="Trash Lion truck"
-              width={803}
-              height={987}
-              quality={100}
-              className="mx-auto w-full max-w-[280px] object-contain md:max-w-[340px] lg:max-w-[400px] xl:max-w-[500px]"
-              priority
-            />
+        <section className="
+          flex flex-col-reverse gap-5
+          !pt-[20px] !pb-[40px]
+          md:flex-row md:gap-[32.01px] md:!pt-[35px] md:!pb-[60px]
+          xl:justify-between xl:gap-0 xl:!pb-[80px]
+          2xl:!pt-[60px] 2xl:gap-20
+        ">
+          {/* Left: Truck Image + Form in Tablet */}
+          <div className="
+            w-full md:w-5/12
+            flex flex-col items-center
+            md:items-start
+            md:justify-start
+          ">
+            {/* Truck */}
+            <div className="hidden md:block w-full">
+              <Image
+                src="/images/truck_no_bg.png"
+                alt="Trash Lion truck"
+                width={803}
+                height={987}
+                quality={100}
+                className="mx-auto w-full max-w-[280px] object-contain md:max-w-[340px] lg:max-w-[400px] xl:max-w-[500px]"
+                priority
+              />
+            </div>
+
+            {/* Tablet Only: Form Below Truck */}
+            <div className="hidden md:block w-full mt-6">
+              <JunkRemovalQuote2 />
+            </div>
           </div>
 
           {/* Right: Text Content */}
-          <div className="flex h-fit w-full max-w-[710px] flex-col items-center gap-4 md:w-7/12 md:items-start lg:w-7/12 xl:w-7/12 2xl:w-1/2">
+          <div className="
+            flex h-fit w-full max-w-[710px] flex-col items-center gap-4
+            md:w-7/12 md:items-start
+            lg:w-7/12 xl:w-7/12 2xl:w-1/2
+          ">
             <Text
               variant="h1"
-              className="text-center text-[38px] leading-[50px] sm:text-[28px] sm:leading-[43px] md:text-[34px] md:leading-[43px] lg:text-left xl:text-left xl:text-[55px] xl:leading-[78px]"
+              className="text-center text-[38px] leading-[50px]
+                sm:text-[28px] sm:leading-[43px]
+                md:text-[34px] md:leading-[43px]
+                lg:text-left xl:text-left
+                xl:text-[55px] xl:leading-[78px]"
             >
               <span className="text-red-600 font-extrabold">
                 North Carolina&apos;s Top-Rated Junk Removal Team
@@ -109,6 +137,7 @@ const Hero = ({ setHeroInView }: { setHeroInView?: (inView: boolean) => void }) 
                 priority
               />
             </div>
+
             {/* Mobile-only Same-Day Pickup + Reviews */}
             <div className="flex flex items-center justify-start gap-1.5 mt-4 md:hidden whitespace-nowrap">
               <div className="flex items-center gap-1.5">
@@ -129,17 +158,22 @@ const Hero = ({ setHeroInView }: { setHeroInView?: (inView: boolean) => void }) 
             <div className="h-4" />
             <div className="flex w-full flex-col items-center md:items-start gap-12">
               <Text className="text-center text-[18px] text-red-400 md:text-left lg:text-[26px]">
-                <span className="font-bold">
-                  $50 Off For New Customers
-                </span>
+                <span className="font-bold">$50 Off For New Customers</span>
               </Text>
 
-              <a
-                href="tel:+19198124559"
-                target="_blank"
-                rel="noopener noreferrer"
-                // onClick={() => gtag_report_conversion('tel:+19198124559')}
-                className="group bg-red-500 hover:text-red-500 flex h-[54px] w-full max-w-[348px] cursor-pointer items-center justify-center gap-2.5 rounded-full px-8 py-4 text-white hover:bg-[#f3f3f3]"
+              <button
+                onClick={() => {
+                  const quoteSection = document.getElementById("quote");
+                  const headerOffset = 160;
+                  if (quoteSection) {
+                    const elementPosition = quoteSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+                  }
+                }}
+                className="group bg-red-600 hover:text-red-600 flex cursor-pointer items-center gap-2.5 rounded-full px-9 py-3 transition-colors hover:bg-white 2xl:w-fit 2xl:text-nowrap"
+                aria-label="Scroll to Quote Section"
               >
                 <div className="relative">
                   <MessageCircle size={24} />
@@ -149,9 +183,9 @@ const Hero = ({ setHeroInView }: { setHeroInView?: (inView: boolean) => void }) 
                   />
                 </div>
                 <p className="font-semibold text-[16px] uppercase">
-                  Call for Free Quote
+                  Contact Us for Free Quote
                 </p>
-              </a>
+              </button>
             </div>
           </div>
         </section>

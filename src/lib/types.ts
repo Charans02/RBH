@@ -41,3 +41,29 @@ export interface Customer {
   avatar_url: string;
   name: string;
 }
+
+declare global {
+  interface Window {
+    gtagSendEvent?: (url: string) => void;
+  }
+}
+
+declare global {
+  interface DataLayerEvent {
+    event: string;
+    form_name?: string;
+    [key: string]: string | number | boolean | undefined;
+  }
+
+  interface Window {
+    gtagSendEvent?: (url: string) => void;
+
+    gtag?: (
+      command: 'config' | 'event' | 'set',
+      targetId: string,
+      params?: Record<string, unknown>
+    ) => void;
+
+    dataLayer: DataLayerEvent[];
+  }
+}

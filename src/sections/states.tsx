@@ -37,12 +37,27 @@ const States = () => {
             taking call and new customers.
           </Text>
           {/* Insert Button Below */}
-          <a
+          {/* <a
             href="tel:+19198124559"
             target="_blank"
             // onClick={() => gtag_report_conversion('tel:+19198124559')}
             className="group bg-red-500 hover:text-red-500 mt-6 flex h-[54px] w-full max-w-[348px] cursor-pointer items-center justify-center gap-2.5 rounded-full px-8 py-4 text-white transition-colors hover:bg-[#f3f3f3]"
-          >
+          > */}
+          <button
+              onClick={() => {
+                const quoteSection = document.getElementById("quote");
+                const headerOffset = 160; // Adjust this value based on your header's height (in pixels)
+                if (quoteSection) {
+                  const elementPosition = quoteSection.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                  window.scrollTo({top: offsetPosition, behavior: "smooth",
+                  });
+                }
+              }}
+              className="group bg-red-500 hover:text-red-500 mt-6 flex h-[54px] w-full max-w-[348px] cursor-pointer items-center justify-center gap-2.5 rounded-full px-8 py-4 text-white transition-colors hover:bg-[#f3f3f3]"
+              aria-label="Scroll to Quote Section"
+            >
             <div className="relative">
               <MessageCircle size={24} />
               <Phone
@@ -51,9 +66,10 @@ const States = () => {
               />
             </div>
             <p className="font-[family-name:var(--font-sora-sans)] text-[16px] leading-[100%] font-semibold uppercase">
-              Call For Free Quote
+              {/* Call For Free Quote */}
+              Contact Us
             </p>
-          </a>
+          </button>
           <div className="mt-8 grid w-full grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
             {STATES.map((state, index) => (
               <div

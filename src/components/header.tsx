@@ -16,16 +16,13 @@ const Header = () => {
 
   const scrollToSection = useCallback(
     (id: string) => {
-      // Close mobile menu if it's open
       if (isMenuOpened) {
         setIsMenuOpened(false);
         document.documentElement.style.overflow = "auto";
       }
 
-      // Small delay to ensure DOM updates
       setTimeout(() => {
         if (id === "top") {
-          // Scroll to the top of the page
           window.scrollTo({
             top: 0,
             behavior: "smooth",
@@ -35,10 +32,9 @@ const Header = () => {
 
         const element = document.getElementById(id);
         if (element) {
-          const headerHeight = 92; // Approximate header height in pixels
+          const headerHeight = 92;
           const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition =
-            elementPosition + window.scrollY - headerHeight;
+          const offsetPosition = elementPosition + window.scrollY - headerHeight;
 
           window.scrollTo({
             top: offsetPosition,
@@ -87,17 +83,19 @@ const Header = () => {
           </div>
 
           <div className="col-start-1 flex items-center ml-1 gap-0.5 xl:hidden">
-            <a
-              href="tel:+19198124559"
-              target="_blank"
-              rel="noopener noreferrer"
-              // onClick={() => gtag_report_conversion('tel:+18176812020')}
-              className="flex items-center gap-1 rounded-full bg-red-600 px-1 py-0.5 text-sm font-[family-name:var(--font-sora-sans)] text-white shadow-md transition hover:bg-red-700"
-              aria-label="Reserve Your Dumpster"
+            <button
+              onClick={() => {
+                const quoteSection = document.getElementById("quote");
+                if (quoteSection) {
+                  quoteSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="flex items-center gap-1 rounded-full bg-red-600 px-1 py-0.5 text-sm font-[family-name:var(--font-sora-sans)] text-white shadow-md transition hover:bg-red-700 md:hidden"
+              aria-label="Scroll to Quote Section"
             >
               <Phone size={18} />
               <span className="font-bold">Call for a Free Quote</span>
-            </a>
+            </button>
 
             <button
               className="hover:text-red-500 cursor-pointer transition-colors"
@@ -130,9 +128,6 @@ const Header = () => {
               height={102}
               className="hidden h-[34px] w-[58px] md:block md:h-[69px] md:w-[87px] xl:h-[80px] xl:w-[105px]"
             />
-            {/* <p className="font-[family-name:var(--font-sora-sans)] text-[13px] leading-[100%] font-semibold md:text-[20px] xl:text-[23px]">
-              .
-            </p> */}
           </Link>
 
           <div className="hidden 2xl:flex 2xl:justify-self-center">
@@ -164,12 +159,19 @@ const Header = () => {
                 919 - 812 - 4559
               </p>
             </div>
-            <a
-              href="tel:+19198124559"
-              target="_blank"
-              rel="noopener noreferrer"
-              // onClick={() => gtag_report_conversion('tel:+18176812020')}
+            <button
+              onClick={() => {
+                const quoteSection = document.getElementById("quote");
+                const headerOffset = 160;
+                if (quoteSection) {
+                  const elementPosition = quoteSection.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                  window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+                }
+              }}
               className="group bg-red-600 hover:text-red-600 flex cursor-pointer items-center gap-2.5 rounded-full px-9 py-3 transition-colors hover:bg-white 2xl:w-fit 2xl:text-nowrap"
+              aria-label="Scroll to Quote Section"
             >
               <div className="relative">
                 <MessageCircle size={24} />
@@ -181,7 +183,7 @@ const Header = () => {
               <p className="hidden font-[family-name:var(--font-sora-sans)] text-[16px] leading-[100%] font-semibold lg:block">
                 Contact Us
               </p>
-            </a>
+            </button>
           </div>
         </div>
       ) : (
